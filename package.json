@@ -14,5 +14,10 @@
     "ecommerce"
   ],
   "author": "Jacqueline Callejas",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0"
+  }
 }
