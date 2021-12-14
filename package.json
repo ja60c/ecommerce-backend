@@ -1,0 +1,18 @@
+{
+  "name": "ecommerce-backend",
+  "version": "1.0.0",
+  "description": "e-commerce backend para el master en code g7",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "backend",
+    "ecommerce"
+  ],
+  "author": "Jacqueline Callejas",
+  "license": "ISC"
+}
