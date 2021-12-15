@@ -1,3 +1,6 @@
+const helmet = require('helmet');
+const morgan = require('morgan');
+
 // REQUIREMENTS
 const express = require('express');
 const app = express();
@@ -8,6 +11,8 @@ require('./db');
 // SERVER SETTINGS + MIDDLEWARES
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(morgan('dev'));
+app.use(helmet());
 
 // ROUTES/ENDPOINTS
 // Homepage
