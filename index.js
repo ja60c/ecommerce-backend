@@ -2,18 +2,19 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
-const routes = require('./routes')
+const routes = require('./routes');
+require('./db');
 
-// SERVER SETTINGS  MIDDLEWARES
+// SERVER SETTINGS + MIDDLEWARES
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ROUTERS/ENDPOINTS
+// ROUTES/ENDPOINTS
 // Homepage
 app.get('/', (req, res) => {
-    return res.send({ message: 'Hola!' });
+  return res.send({ message: 'Hola!' });
 });
-  
+
 app.use('/api/v1', routes);
 
 // LISTENER
