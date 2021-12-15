@@ -1,7 +1,7 @@
-const mongoose = require('../db');
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-// SCHEMA DE MODELO PARA BLOG
+// AUTH SCHEMA
 const authSchema = new Schema({
   email: {
     type: String,
@@ -15,7 +15,7 @@ const authSchema = new Schema({
     type: Boolean,
     default: true
   },
-  date: {
+  createdAt: {
     type: Date,
     default: Date.now
   }
