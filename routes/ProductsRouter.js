@@ -2,18 +2,23 @@ const express = require('express');
 const router = express.Router();
 const { ProductsController } = require('../controllers');
 
-// CRUD PRODUCTOS
+// CRUD Productos
 // Create - POST
-router.post('/', ProductsController.createProduct)
-// Read all - GET
-router.get('/', ProductsController.findAllProducts)
-// Read one - GET
-router.get('/:id', ProductsController.findOneProduct)
+router.post('/', ProductsController.createProduct);
+
+// Read All - GET
+router.get('/', ProductsController.findAllProducts);
+
+// Read One - GET
+router.get('/:id', ProductsController.findOneProduct);
+
 // Update - PUT
-router.put('/:id', ProductsController.updateProduct)
+router.put('/:id', ProductsController.updateProduct);
+
 // Delete - DELETE
-router.delete('/:id', ProductsController.deleteProduct)
-// Destroy - DESTROY
-router.delete('/:id/destroy', ProductsController.destroyProduct)
+router.delete('/:id', ProductsController.deleteProduct);
+
+// Destroy - DELETE
+router.delete('/:id/destroy', ProductsController.destroyProduct);
 
 module.exports = router;
